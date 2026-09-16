@@ -10,3 +10,10 @@
 - Created private repo `solarcalculator` under the org
 - Resolved push auth issue (org repo needed a personal access token scoped to this project, since default cached credentials weren't tied to the org account)
 - Phase 1 committed and pushed successfully
+
+## Session 3
+- Designed visual identity: researched Nizam Systema's existing site (homewebpage-six.vercel.app) for brand voice; landed on green/gold/earth eco palette distinct from the company's purple main-site branding
+- Explicitly addressed and resolved a positioning concern: calculator must not read as "Nizam Systema is a solar provider" — solved via header/footer attribution framing and disclaimer language
+- Built and pasted full Phase 2 UI (all components + updated page.tsx + contact page)
+- Iterated on visual fixes: bigger sun icon, logo integration and sizing (180x40, logo1.png), home-link fix on header, background color changes (flat off-white → sage green tint), diagnosed and fixed a Tailwind config caching issue (needed clean .next restart)
+- Committed and pushed Phase 2
