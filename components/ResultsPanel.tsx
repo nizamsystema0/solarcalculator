@@ -12,7 +12,8 @@ interface Props {
 }
 
 export default function ResultsPanel({ consumptionKwh, recommendation }: Props) {
-  const { recommended, lowerAlternative, higherAlternative, all, recommendedIndex } = recommendation;
+  const { recommended, lowerAlternative, higherAlternative, all, recommendedIndex, coversFully, coveragePercent } =
+    recommendation;
   const currentBillPhp = calculateMonthlyBill(consumptionKwh);
 
   return (
@@ -32,6 +33,14 @@ export default function ResultsPanel({ consumptionKwh, recommendation }: Props) 
           </div>
         </div>
       </div>
+
+      {!coversFully && (
+        <div className="bg-earth/10 border-l-2 border-earth px-4 py-3 text-sm text-ink">
+          Even our largest preset (12 kW) only covers about {Math.round(coveragePercent)}% of your
+          estimated usage. You may need a larger custom installation or multiple systems —
+          consult a solar installer for options beyond what this calculator estimates.
+        </div>
+      )}
 
       <div className="bg-white border border-line border-t-0 relative pl-5">
         <div className="absolute left-0 top-0 bottom-0 w-1 bg-gold" />
@@ -59,11 +68,14 @@ export default function ResultsPanel({ consumptionKwh, recommendation }: Props) 
             </div>
             <div>
               <p className="text-sm font-medium text-ink mb-2">ROI</p>
-              <dl className="text-sm space-y-1">
-                <Row label="Estimated system cost" value={formatPhp(recommended.costPhp)} />
-                <Row label="Annual savings" value={formatPhp(recommended.annualSavingsPhp)} />
-                <Row label="Estimated payback" value={formatPayback(recommended.paybackMonths)} strong />
-              </dl>
+              <p className="text-sm text-inkSoft">
+                {formatPhp(recommended.costPhp)} system cost ÷ {formatPhp(recommended.monthlySavingsPhp)} saved per month
+              </p>
+              <div className="mt-2 inline-block border border-gold rounded px-4 py-2 bg-gold/10">
+                <p className="font-display text-xl font-semibold text-ink">
+                  {formatPayback(recommended.paybackMonths)} to break even
+                </p>
+              </div>
             </div>
           </div>
 

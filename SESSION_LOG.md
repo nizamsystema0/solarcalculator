@@ -17,3 +17,9 @@
 - Built and pasted full Phase 2 UI (all components + updated page.tsx + contact page)
 - Iterated on visual fixes: bigger sun icon, logo integration and sizing (180x40, logo1.png), home-link fix on header, background color changes (flat off-white → sage green tint), diagnosed and fixed a Tailwind config caching issue (needed clean .next restart)
 - Committed and pushed Phase 2
+
+## Session 4
+- Ran content/copy review pass, iterated on hero headline, ROI presentation, methodology transparency note, payback grammar
+- Systematically edge-case tested the calculator (11 scenarios) — all passed
+- Built the two blueprint completeness gaps flagged during testing: consumption-exceeds-max-system warning, appliance-vs-bill mismatch warning
+- Committed and pushed

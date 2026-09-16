@@ -106,6 +106,8 @@ export interface RecommendationResult {
   recommended: SystemResult;
   lowerAlternative: SystemResult | null;
   higherAlternative: SystemResult | null;
+  coversFully: boolean;
+  coveragePercent: number;
 }
 
 /**
@@ -123,15 +125,24 @@ export function recommendSystem(
   let recommendedIndex = all.findIndex(
     (r) => r.monthlyProductionKwh >= consumptionKwh * 0.9
   );
+  const coversFully = recommendedIndex !== -1;
   if (recommendedIndex === -1) recommendedIndex = all.length - 1;
+
+  const recommended = all[recommendedIndex];
+  const coveragePercent =
+    consumptionKwh > 0
+      ? Math.min(100, (recommended.monthlyProductionKwh / consumptionKwh) * 100)
+      : 100;
 
   return {
     all,
     recommendedIndex,
-    recommended: all[recommendedIndex],
+    recommended,
     lowerAlternative: recommendedIndex > 0 ? all[recommendedIndex - 1] : null,
     higherAlternative:
       recommendedIndex < all.length - 1 ? all[recommendedIndex + 1] : null,
+    coversFully,
+    coveragePercent,
   };
 }
 
@@ -147,7 +158,9 @@ export function formatPayback(months: number | null): string {
   if (months === null || !isFinite(months)) return "N/A";
   const years = Math.floor(months / 12);
   const remMonths = Math.round(months % 12);
-  if (years === 0) return `${remMonths} mo`;
-  if (remMonths === 0) return `${years} yr`;
-  return `${years} yr ${remMonths} mo`;
+  const yrLabel = years === 1 ? "yr" : "yrs";
+  const moLabel = remMonths === 1 ? "mo" : "mos";
+  if (years === 0) return `${remMonths} ${moLabel}`;
+  if (remMonths === 0) return `${years} ${yrLabel}`;
+  return `${years} ${yrLabel} ${remMonths} ${moLabel}`;
 }
