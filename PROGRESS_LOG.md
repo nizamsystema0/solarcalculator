@@ -23,3 +23,8 @@
 - Copy pass: reworded headline, added "How we calculate this" methodology note before Step 1, reworked ROI section to show the payback computation explicitly in a highlighted box, fixed payback pluralization (mo/mos, yr/yrs)
 - Built two blueprint gaps identified during edge case testing: (1) shortfall warning when even the 12kW preset doesn't cover estimated consumption, (2) mismatch warning when appliance-based and bill-based consumption estimates diverge significantly (>25%)
 - Full edge case pass completed (11 tests): empty input, tiny bill, high bill, decimal input, zero qty, negative input (correctly blocked), removing all appliances, custom appliance at defaults, kWh-only input, quick narrow-screen glance — all passed
+
+## Live deployment
+- Deployed to Vercel under a separate account (tied to the GitHub identity with nizamsystema0 org access, due to Vercel's 1:1 GitHub-login restriction)
+- Calculator is live at a public URL
+- Deferred DevTools-based responsive testing in favor of testing directly on the live site

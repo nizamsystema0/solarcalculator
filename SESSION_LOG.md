@@ -23,3 +23,7 @@
 - Systematically edge-case tested the calculator (11 scenarios) — all passed
 - Built the two blueprint completeness gaps flagged during testing: consumption-exceeds-max-system warning, appliance-vs-bill mismatch warning
 - Committed and pushed
+
+## Session 5
+- Deployed to Vercel — resolved GitHub org access / multi-account complications by creating a separate Vercel account rather than fighting the permissions flow
+- Site is now live
