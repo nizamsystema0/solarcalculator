@@ -28,3 +28,12 @@
 - Deployed to Vercel under a separate account (tied to the GitHub identity with nizamsystema0 org access, due to Vercel's 1:1 GitHub-login restriction)
 - Calculator is live at a public URL
 - Deferred DevTools-based responsive testing in favor of testing directly on the live site
+
+## SEO pass + UX refinements
+- Technical SEO: page title, meta description, sitemap.xml, robots.txt, WebApplication structured data (all live)
+- Sharing: Copy Link / Facebook / X buttons added after results, with Vercel Analytics event tracking
+- Vercel Analytics enabled with custom events (calculator_started, calculator_completed, share_clicked)
+- Header reworked: two-line stacked title ("Solar Savings Calculator" / "Philippines"), icon enlarged to 60x60 with image-fallback pattern (public/images/icon.png, falls back to inline SVG sun if missing), logo placeholder pattern established (public/images/logo.png)
+- Full-width background image layer added behind main content (outside the narrow content column), single image, no-repeat, cover, 90% opacity
+- Skipped per discussion: FAQ, custom domain, OG image creation (prompt documented), accessibility pass
+- Portfolio/company-site implementation guide delivered as a separate downloadable doc

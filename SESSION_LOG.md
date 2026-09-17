@@ -27,3 +27,10 @@
 ## Session 5
 - Deployed to Vercel — resolved GitHub org access / multi-account complications by creating a separate Vercel account rather than fighting the permissions flow
 - Site is now live
+
+## Session 6
+- Reviewed external SEO/product recommendations doc, triaged into locked/deferred items
+- Built: meta/SEO tags, sitemap, robots.txt, structured data, sharing buttons, analytics + event tracking, header icon/title rework with image-fallback pattern
+- Iterated extensively on background image placement — diagnosed and fixed a real structural bug (background was scoped to the narrow content column instead of full page width), then tuned single-image no-repeat/cover approach after tiling attempt looked too busy
+- User regenerating background asset at 1920x1080 with transparency (hero-bg.png), original preserved as hero-bg2.png
+- Stopping point for this session
