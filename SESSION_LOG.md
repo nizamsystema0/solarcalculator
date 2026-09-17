@@ -40,3 +40,9 @@
 - Wired up Open Graph/Twitter metadata using the original hero-bg2.png asset (near-perfect aspect ratio match, no cropping needed)
 - Noted Facebook link preview caching behavior — requires Sharing Debugger "Scrape Again" to reflect changes, won't auto-update
 - Session close: OG image item complete pending redeploy + cache refresh verification
+## Session 6 — closed
+- Verified OG image live via Facebook Sharing Debugger — working correctly
+- No further action items open; project stable at this state until user resumes
+## Session 6 — final
+- Upgraded share buttons to icon-only with hover tooltips per user request
+- Committed and pushed — project closed out at this state, all actively-scoped work complete

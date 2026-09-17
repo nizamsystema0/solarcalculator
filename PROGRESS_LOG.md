@@ -43,3 +43,8 @@
 - Open Graph + Twitter card metadata added, reusing hero-bg2.png (1733x907, near-exact OG aspect ratio) as og-image.png
 - New hero-bg.png (1920x1080, transparent) and custom icon.png both live on the page
 - Deferred indefinitely: Responsive UI testing, Cross-browser check, custom domain, Search Console, FAQ, accessibility pass
+
+## OG image verification — project closed out
+- Confirmed via Facebook Sharing Debugger: og:title, og:description, og:image all rendering correctly on the live site
+- All actively-scoped work items complete (core calculator, copy, edge cases, SEO, sharing, analytics, branding, background/footer, OG image)
+- Remaining items (responsive testing, cross-browser check, custom domain, Search Console, FAQ, accessibility) deferred indefinitely — not blockers, project is stable and functional as-is
