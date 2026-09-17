@@ -37,3 +37,9 @@
 - Full-width background image layer added behind main content (outside the narrow content column), single image, no-repeat, cover, 90% opacity
 - Skipped per discussion: FAQ, custom domain, OG image creation (prompt documented), accessibility pass
 - Portfolio/company-site implementation guide delivered as a separate downloadable doc
+
+## OG image + final layout fixes
+- Fixed sticky-footer layout bug (flex min-h-screen + flex-1 pattern) so background/footer reach viewport bottom regardless of content height
+- Open Graph + Twitter card metadata added, reusing hero-bg2.png (1733x907, near-exact OG aspect ratio) as og-image.png
+- New hero-bg.png (1920x1080, transparent) and custom icon.png both live on the page
+- Deferred indefinitely: Responsive UI testing, Cross-browser check, custom domain, Search Console, FAQ, accessibility pass

@@ -34,3 +34,9 @@
 - Iterated extensively on background image placement — diagnosed and fixed a real structural bug (background was scoped to the narrow content column instead of full page width), then tuned single-image no-repeat/cover approach after tiling attempt looked too busy
 - User regenerating background asset at 1920x1080 with transparency (hero-bg.png), original preserved as hero-bg2.png
 - Stopping point for this session
+
+## Session 6 (cont'd)
+- Diagnosed and fixed the full-width background + sticky footer layout bug — documented as a standing lesson: main content column is narrow/shelled, full-width elements must wrap outside it; footer needs flex min-h-screen pattern
+- Wired up Open Graph/Twitter metadata using the original hero-bg2.png asset (near-perfect aspect ratio match, no cropping needed)
+- Noted Facebook link preview caching behavior — requires Sharing Debugger "Scrape Again" to reflect changes, won't auto-update
+- Session close: OG image item complete pending redeploy + cache refresh verification

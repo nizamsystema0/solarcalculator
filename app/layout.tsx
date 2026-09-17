@@ -19,6 +19,20 @@ export const metadata: Metadata = {
   title: "Solar Savings Calculator Philippines | Nizam Systema",
   description:
     "Estimate your solar system size, cost, potential electricity savings, and payback period based on your monthly electricity bill in the Philippines.",
+  openGraph: {
+    title: "Solar Savings Calculator Philippines",
+    description:
+      "Estimate your solar system size, cost, potential electricity savings, and payback period based on your monthly electricity bill in the Philippines.",
+    images: ["/images/og-image.png"],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Solar Savings Calculator Philippines",
+    description:
+      "Estimate your solar system size, cost, potential electricity savings, and payback period based on your monthly electricity bill in the Philippines.",
+    images: ["/images/og-image.png"],
+  },
 };
 
 const structuredData = {
